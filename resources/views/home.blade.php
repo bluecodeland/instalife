@@ -6,7 +6,7 @@
         <div class="col-3 p-1"><img src="/image/avatar.png" alt="" class="w-50 rounded-circle ml-5"></div>
         <div class="col-9">
             <div class="pt-3">
-                <h1>ChangeYourLife</h1>
+                <h1>{{ $user->username }}</h1>
             </div>
             <div class="d-flex">
                 <div class="pr-3"> <strong>153</strong> posts</div>
