@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    {{-- pages styles and scripts --}}
+    @yield('header')
 </head>
 <body>
     <div id="app">

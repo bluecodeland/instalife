@@ -10,8 +10,8 @@ class ProfilesController extends Controller
     {
         // $user = User::findOrFail($user);
         $user = User::where('username', $user)->firstOrfail();
-      
-              return view('home', [
+
+              return view('profiles.index', [
             'user' => $user,
         ]);
     }
