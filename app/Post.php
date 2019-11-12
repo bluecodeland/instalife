@@ -10,4 +10,11 @@ class Post extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    // protected $fillable = [
+    //     'username', 'name', 'email', 'password',
+    //  ];
+
+    protected $guarded = [];
+
 }

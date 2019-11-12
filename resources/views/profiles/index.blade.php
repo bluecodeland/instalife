@@ -7,7 +7,7 @@
         <div class="col-9">
             <div class="pt-3 d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
-                <a href="#" class="">Add New Post</a>
+                <a href="/posts/create" class="">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pr-3"> <strong>153</strong> posts</div>
@@ -20,16 +20,27 @@
 
             </div>
             <div class="row pt-3">
-                <div class="col-md">
-                     <img src="../image/001.jpg" alt="" class="w-100 p-2">
+
+                @forelse($user->posts as $post)
+                <div class="col-md-4">
+                    <img src="/storage/{{$post->image}}" alt="" class="w-100 p-2">
+                <h4 class="d-flex justify-content-center align-items-center ">{{$post->caption}}</h4>
                 </div>
-                <div class="col-md">
-                    <img src="../image/002.jpg" alt="" class="w-100 p-2">
+                @empty
+
+            </div>
+        </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <h3 class="d-flex justify-content-center align-items-center bg-success alert w-50">There is no post to see.</h3>
                 </div>
-                <div class="col-md">
-                    <img src="../image/001.jpg" alt="" class="w-100 p-2">
-                </div>
+
+
+
+                @endforelse
+
+
             </div>
     </div>
+
 </div>
 @endsection
