@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "anetwork/validation": "^2.2",
         "fideloper/proxy": "^4.0",
         "intervention/image": "^2.5",
         "ipecompany/smsirlaravel": "^1.0",
