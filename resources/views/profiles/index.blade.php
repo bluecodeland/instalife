@@ -1,5 +1,7 @@
 @extends('layouts.app')
+@section('header')
 
+@endsection
 @section('content')
 <div class="container mt-5">
     <div class="row">
@@ -10,7 +12,7 @@
                 <a href="/posts/create" class="">Add New Post</a>
             </div>
             <div class="d-flex">
-                <div class="pr-3"> <strong>153</strong> posts</div>
+                <div class="pr-3"> <strong>{{$user->posts->count()}}</strong> posts</div>
                 <div class="pr-3"> <strong>23k</strong> followers</div>
                 <div class="pr-3"> <strong>212k</strong> followeing</div>
             </div>
@@ -43,4 +45,7 @@
     </div>
 
 </div>
+
+
+
 @endsection

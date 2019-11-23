@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Validator;
+use Intervention\Image\Facades\Image;
 use App\Post;
 
 
@@ -29,9 +30,11 @@ class PostsController extends Controller
                 // another form of spelling 'image' => ['required', 'image'],
 
         ]);
-        $imagePath = request('image')->store('uploads', 'public');
 
-            // we can use validate to create
+        $imagePath = request('image')->store('uploads', 'public');
+            $image = image::make(public_path("storage/{$imagePath}"))->fit(1200,1200);
+            $image->save();
+ ;           // we can use validate to create
             //  auth()->user()->posts()->create($validatedData);
 
             auth()->user()->posts()->create([
