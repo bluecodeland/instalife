@@ -25,7 +25,7 @@ class PostsController extends Controller
     public function store() {
 
         $validatedData = request()->validate([
-                'caption' => 'required|melli_code',
+                'caption' => 'required',
                 'image' => 'required|image',
                 // another form of spelling 'image' => ['required', 'image'],
 
